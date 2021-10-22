@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/boton2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorPrimero"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:onClick="incrementar2"
+        android:text="0"
+        android:textSize="34sp" />
 
-        <TextView
-            android:id="@+id/boton2"
-            android:layout_width="412dp"
-            android:layout_height="355dp"
-            android:gravity="center"
-            android:onClick="incrementar2"
-            android:text="Hello World!"
-            android:textSize="24sp" />
 
-        <TextView
-            android:id="@+id/boton1"
-            android:layout_width="410dp"
-            android:layout_height="375dp"
-            android:gravity="center"
-            android:onClick="incrementar1"
-            android:text="Hello World!"
-            android:textSize="24sp" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/boton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorSegundo"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:onClick="incrementar1"
+        android:text="0"
+        android:textSize="34sp" />
+</LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- weight Esto sirve para que el linear divida la pantalla dando el tamaño a los textview, si hay mas de uno en el linear
+            cogen tamaño respecto a los que haya-->
+    <!--@color/colorPrimario Esto sirve para poner un color predefinido al text view. Hay que ir a la clase Colors.xml y ponerlo ahi tambien-->

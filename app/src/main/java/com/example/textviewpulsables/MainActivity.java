@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     TextView btn2;
     int contador1, contador2;
     int color1,color2;
+    Random r= new Random();
+
 
 
     @Override
@@ -44,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
                 contador1=0;
                 btn1.setText(""+contador1);
                 btn1.setBackgroundColor(0);
-
                 return true;
             }
         });
@@ -62,22 +63,26 @@ public class MainActivity extends AppCompatActivity {
 
     public void incrementar1(View v){
         contador1++;
-
         btn1.setText(""+contador1);
-        Random r= new Random();
         color1 = Color.rgb(r.nextInt(256),r.nextInt(256),r.nextInt(256));
         btn1.setBackgroundColor(color1);
+        //cambiarColor(btn1);
         compruebaIguales();
     }
     public void incrementar2(View v){
         contador2++;
         btn2.setText(""+contador2);
-        Random r= new Random();
         color2 = Color.rgb(r.nextInt(256),r.nextInt(256),r.nextInt(256));
         btn2.setBackgroundColor(color2);
+        //cambiarColor(btn2);
         compruebaIguales();
 
     }
+   /* public void cambiarColor(View v){
+        Random r= new Random();
+        int color = Color.rgb(r.nextInt(256),r.nextInt(256),r.nextInt(256));
+        v.setBackgroundColor(color);
+    }*/
 
     public void compruebaIguales(){
         if (contador1==contador2){
