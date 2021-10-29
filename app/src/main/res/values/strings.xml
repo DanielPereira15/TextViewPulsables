@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TextViewPulsables</string>
+    <string name="coinciden">Los dos valores son iguales</string>
 </resources>

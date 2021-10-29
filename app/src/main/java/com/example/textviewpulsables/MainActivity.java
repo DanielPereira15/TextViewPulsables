@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void compruebaIguales(){
         if (contador1==contador2){
-            Toast.makeText(this,"Los botones son iguales",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"@strings/coinciden",Toast.LENGTH_LONG).show();
         }
     }
 
